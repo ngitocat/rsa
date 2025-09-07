@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     
-    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#4a148c">
   </head>  
   <body>
@@ -44,7 +44,7 @@
         document.getElementById('title').textContent = name;
         document.getElementById('text').textContent = uri;
         document.getElementById('url').textContent = link;
-        window.open(`http://192.168.1.50:8181/?url=${uri}`);
+        window.open(`http://192.168.1.11:8181/?url=${uri}`);
         window.close();      
       });
     </script>
