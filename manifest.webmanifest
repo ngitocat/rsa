@@ -1,0 +1,42 @@
+{
+ "name": "Play On Kodi",
+ "short_name": "pok",
+ "description": "Send url from video host provider to kodi player",
+ "icons": [
+  {
+   "src": "res/mipmap-mdpi/ic_launcher.png",
+   "sizes": "48x48",
+   "type": "image/png"
+  },
+  {
+   "src": "res/mipmap-xxhdpi/ic_launcher.png",
+   "sizes": "144x144",
+   "type": "image/png"
+  }
+ ],
+ "screenshots": [
+    {
+      "src": "images/screenshot1.png",
+      "type": "image/png",
+      "sizes": "720x540"
+    },
+    {
+      "src": "images/screenshot2.png",
+      "type": "image/png",
+      "sizes": "720x540"
+    }
+ ],
+ "start_url": "./activities/player_activity.html?name=bob&age=15",
+ "display": "standalone",
+ "theme_color": "#510090",
+ "background_color": "#510090",
+ "share_target": {
+  "action": "./activities/target_activity.html",
+  "method": "GET",
+  "params": {
+    "title": "name",
+    "text": "uri",
+    "url": "link"
+  }
+ }
+}

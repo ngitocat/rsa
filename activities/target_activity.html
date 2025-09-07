@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://web-share.glitch.me/target.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Web Share Target</title>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#4a148c">
+  </head>  
+  <body>
+    <h1>
+      Web Share Target (v1)
+    </h1>
+    <p id="requireHTTPS" class="hidden">
+      <b>STOP!</b> This page <b>must</b> be served over HTTPS.
+      Please <a>reload this page via HTTPS</a>.
+    </p>
+
+    <p>
+      The Web Share Target API allows installed web apps
+      to register with the underlying OS as a share target
+      to receive shared content from either the Web Share
+      API or system events, like the OS-level share button. 
+    </p>
+        
+    <div>
+      <b><code>window.location</code>:</b> <code id="href">https://ngit.pagesperso-orange.fr/meteoLR/target.html</code><br>
+      <b>Title:</b> <code id="title"></code><br>
+      <b>Text:</b> <code id="text"></code><br>
+      <b>URL:</b> <code id="url"></code>
+    </div>    
+    
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('href').textContent = window.location.href;
+        var parsedUrl = new URL(window.location);
+        var params = parsedUrl.searchParams;
+        var name = params.get('name');
+        var uri = params.get('uri');
+        var link = params.get('link');
+        document.getElementById('title').textContent = name;
+        document.getElementById('text').textContent = uri;
+        document.getElementById('url').textContent = link;
+        window.open(`http://192.168.1.50:8181/?url=${uri}`);
+        window.close();      
+      });
+    </script>
+  
+
+</body></html>
