@@ -46,12 +46,12 @@
       "sizes": "720x540"
     }
  ],
- "start_url": "./activities/player_activity.html?name=bob&age=15",
+ "start_url": "activities/player_activity.html?name=bob&age=15",
  "display": "standalone",
  "theme_color": "#510090",
  "background_color": "#510090",
  "share_target": {
-  "action": "activities/target_activity.html",
+  "action": "./activities/target_activity.html",
   "method": "GET",
   "params": {
     "title": "name",
