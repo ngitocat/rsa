@@ -36,17 +36,17 @@
  ],
  "screenshots": [
     {
-      "src": "./images/screenshot1.png",
+      "src": "images/screenshot1.png",
       "type": "image/png",
       "sizes": "720x540"
     },
     {
-      "src": "./images/screenshot2.png",
+      "src": "images/screenshot2.png",
       "type": "image/png",
       "sizes": "720x540"
     }
  ],
- "start_url": "activities/player_activity.html?name=bob&age=15",
+ "start_url": ".",
  "display": "standalone",
  "theme_color": "#510090",
  "background_color": "#510090",
